@@ -14,7 +14,7 @@ type PartnerProps = {
 };
 
 export const PartnerImage = (props: ImageProps) => (
-    <Image src={props.src} alt="Partner" width={180} height={150} objectFit="contain" />
+    <Image src={props.src} alt="Partner" width={100} height={150} objectFit="contain" />
 );
 
 export const Partner = (props: PropsWithChildren<PartnerProps>) => (
@@ -27,18 +27,9 @@ export const Partner = (props: PropsWithChildren<PartnerProps>) => (
 
 export const PartnerSection = () => (
     <section className="bg-blue-dark">
-        <Container className="grid grid-cols-1 gap-x-16 max-w-screen-2xl md:grid-cols-2 lg:grid-cols-4">
-            <Partner name="Flightsim.to" path="https://flightsim.to/">
-                <PartnerImage src="/img/partners/flightsimto.png" />
-            </Partner>
-            <Partner name="FSNews" path="https://fsnews.eu/">
-                <PartnerImage src="/img/partners/fsnews.png" />
-            </Partner>
-            <Partner name="YourControls" path="https://github.com/Sequal32/yourcontrols">
-                <PartnerImage src="/img/partners/yourcontrols.png" />
-            </Partner>
-            <Partner name="SaltySimulations" path="https://discord.com/invite/S4PJDwk">
-                <PartnerImage src="/img/partners/salty.svg" />
+        <Container className="grid grid-cols-1 gap-x-16 max-w-screen-2xl md:grid-cols-2 lg:grid-cols-1">
+            <Partner name="AssettoServer" path="https://assettoserver.org/">
+                <PartnerImage src="/img/partners/assettoserver.svg" />
             </Partner>
         </Container>
     </section>

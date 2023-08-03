@@ -21,12 +21,11 @@ export const Footer = () => (
         <Container className="flex flex-col space-y-2">
 
             <div className="flex gap-x-4 justify-center">
-                <FooterIconItem icon={faGithub} href="https://github.com/flybywiresim" />
-                <FooterIconItem icon={faTwitter} href="https://twitter.com/FlyByWireSim" />
-                <FooterIconItem icon={faFacebook} href="https://www.facebook.com/FlyByWireSimulations" />
-                <FooterIconItem icon={faDiscord} href="https://discord.gg/flybywire" />
-                <FooterIconItem icon={faTwitch} href="https://www.twitch.tv/flybywiresimulations" />
-                <FooterIconItem icon={faYoutube} href="https://www.youtube.com/c/FlyByWireSimulations" />
+                {/*<FooterIconItem icon={faGithub} href="https://github.com/flybywiresim" />*/}
+                <FooterIconItem icon={faTwitter} href="https://twitter.com/shutokorevival1" />
+                <FooterIconItem icon={faFacebook} href="https://www.facebook.com/ShutokoRevivalProject/" />
+                <FooterIconItem icon={faDiscord} href="https://discord.gg/shutokorevivalproject" />
+                <FooterIconItem icon={faYoutube} href="https://www.youtube.com/@ShutokoRevivalProject" />
             </div>
 
             <div className="flex gap-x-4 justify-center text-center">
@@ -38,7 +37,7 @@ export const Footer = () => (
                 >
                     Source Code
                 </a>
-                <span className="hover:underline cursor-pointer">
+                {/*<span className="hover:underline cursor-pointer">
                     <Link href="/tos">
                         Terms of Service
                     </Link>
@@ -47,21 +46,10 @@ export const Footer = () => (
                     <Link href="/privacy">
                         Privacy Policy
                     </Link>
-                </span>
+                </span>*/}
             </div>
 
-            <a
-                className="flex justify-center"
-                href="https://vercel.com/?utm_source=flybywiresim&utm_campaign=oss"
-                target="_blank"
-                rel="noreferrer"
-            >
-                Powered by
-                <span className="mx-2">
-                    <Image src="/svg/vercel.svg" alt="Vercel" width={60} height={20} />
-                </span>
-            </a>
-            <em className="text-center text-teal-100">&copy; FlyByWire Simulations and its contributors 2020-2021</em>
+            <em className="text-center text-teal-100">&copy; 2023 Shutoko Revival Project</em>
         </Container>
     </footer>
 );

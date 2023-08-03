@@ -5,6 +5,7 @@ import { MapProps } from '@flybywiresim/react-components';
 import { IconArrowRight } from '@tabler/icons';
 import { Card, CardBody, CardTitle } from '../utils/Card';
 import Container from '../utils/Container';
+import { Button } from '../utils/Button';
 
 const MapDisplay = dynamic<MapProps>(
     () => import('@flybywiresim/react-components').then((mod) => mod.Map),
@@ -51,17 +52,16 @@ export const Community = () => {
     return (
         <section id="community" className="flex flex-col justify-between items-center text-blue-dark-contrast bg-gray-50 lg:flex-row">
             <Container className="flex flex-col py-12 max-w-6xl lg:px-24">
-                <span className="mb-3 w-24 h-2 bg-teal-light-contrast rounded-full" />
+                <span className="mb-3 w-24 h-2 bg-blue-light rounded-full" />
                 <h1>Community Insights</h1>
                 <p className="max-w-prose text-gray-800">
-                    Discover the extensive community behind every FlyByWire Simulations aircraft - a vibrant and active online group that prioritises collaborative work and openness.
+                    Shutoko Revival Project is the most popular track mod for Assetto Corsa.
                 </p>
 
                 <div className="grid grid-cols-2 gap-y-8 my-6 sm:grid-cols-4">
-                    <Statistic statCount={liveFlights} statName="Live Flights" />
-                    <Statistic statCount={commitCount} statName="Commits" />
-                    <Statistic statCount={contributorCount} statName="Contributors" />
-                    <Statistic statCount="1M+" statName="Downloads" />
+                    <Statistic statCount="1,234" statName="Drivers Online" />
+                    <Statistic statCount="543" statName="Servers" />
+                    <Statistic statCount="700k+" statName="Discord Members" />
                 </div>
 
                 <div className="my-8">
@@ -73,13 +73,13 @@ export const Community = () => {
                             Discord
                         </CardTitle>
                         <CardBody>
-                            Our Discord server is where we plan the entirety of our projects and provide most of our support.
+                            Our Discord server is where we plan the entirety of our project and provide our support.
                             Join us to chat with other members of the community, get started with contributing, or ask us a question!
                         </CardBody>
 
                         <a
                             className="self-center py-2 px-3 text-xl font-semibold text-white bg-discord hover:bg-discord-dark rounded-xl transition"
-                            href="https://discord.gg/flybywire"
+                            href="https://discord.gg/shutokorevivalproject"
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -89,9 +89,68 @@ export const Community = () => {
                     </Card>
                 </div>
             </Container>
-            <div className="relative z-10 w-full h-144 lg:w-1/2 lg:h-200">
-                <MapDisplay refreshInterval={mapRefreshInterval} disableMenu disableWeather={false} disableScroll forceTileset="carto-light" />
-            </div>
+            <div className="flex flex-col w-full divide-y divide-gray-500 lg:w-2/5 m-auto">
+                        {/* Installer */}
+                        <div className="pt-16 pb-8 lg:pt-0">
+                            <span className="text-4xl text-blue-light">Official Servers</span>
+
+                            <p className="mt-4 mb-6 max-w-prose">
+                                Servers hosted by the Shutoko Revival Project Team, focused on Street Racing.
+                            </p>
+
+                            <div className="text-sm font-medium text-center text-gray-500 border-gray-200">
+                                <ul className="flex flex-wrap -mb-px">
+                                    <li className="mr-2">
+                                        <a href="#" className="inline-block p-4 border-b-2 rounded-t-lg active text-blue-light border-blue-light" aria-current="page">Europe</a>
+                                    </li>
+                                    <li className="mr-2">
+                                        <a href="#" className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:border-gray-400 hover:text-gray-600">US East</a>
+                                    </li>
+                                    <li className="mr-2">
+                                        <a href="#" className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:border-gray-400 hover:text-gray-600">Asia</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="divide-y divide-gray-400">
+                                <div className="flex flex-row justify-between items-center mb-3">
+                                    <span className="text-xl">EU 1 - No Traffic</span>
+                                    <span className="text-xl ml-auto mr-6">23/40</span>
+                                    <a href="#">
+                                        <Button className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
+                                    </a>
+                                </div>
+                                <div className="flex flex-row justify-between items-center pt-3 mb-3">
+                                    <span className="text-xl">EU 2 - Traffic</span>
+                                    <span className="text-xl ml-auto mr-6">23/40</span>
+                                    <a href="#">
+                                        <Button className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
+                                    </a>
+                                </div>
+                                <div className="flex flex-row justify-between items-center pt-3 mb-3">
+                                    <span className="text-xl">EU 3 - Traffic - Street Car Pack</span>
+                                    <span className="text-xl ml-auto mr-6">23/40</span>
+                                    <a href="#">
+                                        <Button className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
+                                    </a>
+                                </div>
+                                <div className="flex flex-row justify-between items-center pt-3 mb-3">
+                                    <span className="text-xl">EU 4 - Traffic</span>
+                                    <span className="text-xl ml-auto mr-6">23/40</span>
+                                    <a href="#">
+                                        <Button className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
+                                    </a>
+                                </div>
+                                <div className="flex flex-row justify-between items-center pt-3 mb-3">
+                                    <span className="text-xl">EU PTB - Traffic</span>
+                                    <span className="text-xl ml-auto mr-6">23/40</span>
+                                    <a href="#">
+                                        <Button className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         </section>
     );
 };

@@ -3,13 +3,15 @@ import { Installer } from '../components/home/Installer';
 import { Community } from '../components/home/Community';
 import { PartnerSection } from '../components/home/PartnerSection';
 import { Donate } from '../components/home/Donate';
+import { Download } from '../components/projects/A32NX/Download';
 
 const Index = () => (
     <>
         <A320Header />
-        <Installer />
+        {/*<Installer />*/}
+        <Download expOnHold/>
         <Community />
-        <PartnerSection />
+        {/*<PartnerSection />*/}
         <Donate />
     </>
 );

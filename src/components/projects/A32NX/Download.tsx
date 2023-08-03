@@ -15,43 +15,27 @@ export const Download = ({ expOnHold }: { expOnHold?: boolean }) => {
                 <div className="flex flex-col lg:flex-row">
                     <div className="w-full lg:pr-12 lg:w-3/5">
                         <div className="w-1/2 text-left divide-y divide-gray-500 2xl:w-1/4">
-                            <h2 className="text-base font-medium tracking-widest text-blue-200 uppercase">READY TO FLY?</h2>
+                            <h2 className="text-base font-medium tracking-widest text-blue-200 uppercase">READY TO DRIVE?</h2>
                             <p className="pt-3 mt-3 text-5xl font-medium text-blue-light">
                                 Download
                             </p>
                         </div>
 
-                        <p className="mt-5 max-w-prose text-xl">
-                            We have included many options to download our addons, you can use our custom and simple installer to always keep your products up to date,
-                            or you can download using standalone installations.
+                        <p className="my-5 max-w-prose text-xl">
+                            Need help with installation? Visit the #help channel in our Discord server.
                         </p>
 
-                        <ul className="pt-7 pl-5 -m-2 text-lg list-disc text-gray-200">
-                            <li className="pl-2 ml-2">Integrates seamlessly into Microsoft Flight Simulator - no external programs required.</li>
-                            <li className="pl-2 ml-2">Safe, trustworthy, and constantly updated to assure nothing is broken.</li>
-                            <li className="pl-2 ml-2">One click install, neatly organized into one compact folder.</li>
-                        </ul>
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y4Ku4wyiTl8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
                     <div className="flex flex-col w-full divide-y divide-gray-500 lg:w-2/5">
                         {/* Installer */}
                         <div className="pt-16 pb-8 lg:pt-0">
-                            <span className="text-4xl text-blue-100">Installer</span>
+                            <span className="text-4xl text-blue-100">Track</span>
 
                             <p className="mt-4 mb-6 max-w-prose">
-                                Our easy-to-use installer is the easiest way to get started with our addons. Simply launch and install any addon you want, with only two clicks.
+                                The stable release is required for most servers.
                             </p>
 
-                            <a href="https://api.flybywiresim.com/installer">
-                                <Button className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
-                            </a>
-                        </div>
-
-                        {/* Direct Download */}
-                        <div className="pt-7">
-                            <span className="text-2xl text-blue-100">Direct Download</span>
-                            <p className="mt-4 mb-6 max-w-prose">
-                                If you prefer a direct download, the following links are available.
-                            </p>
 
                             <div className="divide-y divide-gray-700">
                                 <div className="flex flex-row justify-between items-center mb-5">
@@ -61,31 +45,24 @@ export const Download = ({ expOnHold }: { expOnHold?: boolean }) => {
                                     </a>
                                 </div>
                                 <div className="flex flex-row justify-between items-center pt-5 mb-5">
-                                    <span className="text-xl text-gray-300">Development Build</span>
+                                    <span className="text-xl text-gray-300">Public Testing Build</span>
                                     <a href={getDownloadLink(urls.dev)}>
-                                        <Button className="float-right w-40 font-bold bg-blue-light-contrast hover:bg-blue-medium">Download</Button>
+                                        <Button className="float-right w-40 font-bold text-blue-light hover:text-blue-light hover:bg-white border-2 border-blue-light">Download</Button>
                                     </a>
                                 </div>
-                                <div>
-                                    <div className="flex flex-row justify-between items-center pt-5 mb-8">
-                                        <span className="text-xl text-gray-300">Experimental Build</span>
-                                        <a href={expOnHold ? undefined : getDownloadLink(urls.exp)}>
-                                            <Button
-                                                className={`float-right w-40 font-bold bg-blue-light-contrast ${expOnHold ? 'opacity-30 cursor-not-allowed' : 'hover:bg-blue-medium'}`}
-                                            >
-                                                Download
-                                            </Button>
-                                        </a>
-                                    </div>
-                                    {expOnHold && (
-                                        <span className="flex-wrap mb-8 text-gray-300">
-                                            Our Experimental Version is temporarily
-                                            <a href="https://docs.flybywiresim.com/fbw-a32nx/support/exp/" className="text-blue-light">&#32;on hold&#32;</a>
-                                            and all of its features have been moved to the Development Version.
-                                        </span>
-                                    )}
-                                </div>
                             </div>
+                        </div>
+
+                        {/* Direct Download */}
+                        <div className="pt-7">
+                            <span className="text-2xl text-blue-100">Car Pack</span>
+                            <p className="mt-4 mb-6 max-w-prose">
+                                Contains all cars required to play on our official servers.
+                            </p>
+
+                            <a href="https://api.flybywiresim.com/installer">
+                                <Button className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -13,22 +13,22 @@ const App = ({ Component, pageProps }: AppProps) => (
             <meta name="theme-color" content="#00c2cc" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-            <title>FlyByWire Simulations</title>
+            <title>Shutoko Revival Project</title>
 
             <meta
                 key="description"
                 name="description"
-                content="Official FlyByWire Simulations website, an open-source community providing high quality addons for Microsoft Flight Simulator."
+                content="Official Shutoko Revival Project website, the definite version of Shutoko Expressway for Assetto Corsa."
             />
             <meta
                 key="og:title"
                 name="og:title"
-                content="FlyByWire Simulations"
+                content="Shutoko Revival Project"
             />
             <meta
                 key="og:description"
                 name="og:description"
-                content="Official FlyByWire Simulations website, an open-source community providing high quality addons for Microsoft Flight Simulator."
+                content="Official Shutoko Revival Project website, the definite version of Shutoko Expressway for Assetto Corsa."
             />
             <meta
                 key="og:image"
