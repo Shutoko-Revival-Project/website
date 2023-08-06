@@ -27,11 +27,11 @@ const GameServer: React.FC<{ serverApiUrl: string; serverName: string; serverLin
   }, [serverApiUrl]);
 
   return (
-    <div className="flex flex-row justify-between items-center mb-3">
+    <div className="flex flex-row justify-between items-center mt-3 mb-3">
         <span className="text-xl">{serverName}</span>
         <span className="text-xl ml-auto mr-6">{server?.clients}/40</span>
         <a href={serverLink}>
-            <Button className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
+            <Button className="float-right w-40 mt-3 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
         </a>
     </div>
   );
