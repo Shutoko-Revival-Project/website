@@ -106,7 +106,7 @@ export const Community = () => {
                             <>
                                 <GameServer serverApiUrl={`/api/getAsia1`} serverName={'Asia 1 - No Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=15.235.162.98&httpPort=8081"} />
                                 <GameServer serverApiUrl={`/api/getAsia2`} serverName={'Asia 2 - Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=15.235.162.98&httpPort=8082"} />
-                                <GameServer serverApiUrl={`/api/getAsia3`} serverName={'Asia 3 - Traffuc - Street Car Pack'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=15.235.162.98&httpPort=8083"} />
+                                <GameServer serverApiUrl={`/api/getAsia3`} serverName={'Asia 3 - Traffic - Street Car Pack'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=15.235.162.98&httpPort=8083"} />
                             </>
                         }
                         {
