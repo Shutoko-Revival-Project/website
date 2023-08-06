@@ -31,7 +31,7 @@ export const Footer = () => (
             <div className="flex gap-x-4 justify-center text-center">
                 <a
                     className="hover:underline"
-                    href="https://github.com/flybywiresim/flybywiresim-website/"
+                    href="https://github.com/Shutoko-Revival-Project/website"
                     target="_blank"
                     rel="noreferrer"
                 >

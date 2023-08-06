@@ -2,14 +2,11 @@
 
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
-const reactComponentsSafeList = require('@flybywiresim/react-components/build/usedCSSClasses.json');
 
 module.exports = {
     content: [
         './src/**/*.{js,ts,jsx,tsx}',
-        './node_modules/@flybywiresim/react-components/build/usedCSSClasses.json',
     ],
-    safelist: [...reactComponentsSafeList],
     theme: {
         container: {
             center: true,

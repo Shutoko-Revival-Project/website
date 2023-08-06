@@ -1,6 +1,6 @@
-![FlyByWire Simulations](https://raw.githubusercontent.com/flybywiresim/branding/1391fc003d8b5d439d01ad86e2778ae0bfc8b682/tails-with-text/FBW-Color-Light.svg)
+This is the website repository for the [Shutoko Revival Project website](https://shutokorevivalproject.com/).
 
-This is the website repository for the [FlyByWire Simulations website](https://flybywiresim.com/).
+Based on the excellent [FlyByWire Simulations Website](https://github.com/flybywiresim/website).
 
 ## Getting Started
 
@@ -29,7 +29,3 @@ npm run export
 + [Next.js](https://nextjs.org) used to build our page.
 + [React](https://reactjs.org/) javascript library used to make UI.
 + [tailwindcss](https://tailwindcss.com/) low level CSS classes.
-
-##
-
-[![Powered by Vercel](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)](https://vercel.com/?utm_source=[flybywiresim]&utm_campaign=oss "Powered by Vercel")

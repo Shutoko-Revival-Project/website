@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
+import { MouseEventHandler, useEffect, useState } from 'react';
 import Image from 'next/image';
-import { IconArrowRight } from '@tabler/icons';
 import { Card, CardBody, CardTitle } from '../utils/Card';
 import Container from '../utils/Container';
-import { Button } from '../utils/Button';
-import GameServer from './GameServer'
+import GameServer from './GameServer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const STATISTICS_ENDPOINT = "http://localhost:5051/Statistics";
 
@@ -51,8 +50,8 @@ export const Community = () => {
             })
     }, []);
 
-    const displayServers = (e) => {
-        setSelectedRegion(e.target.value)
+    const displayServers : MouseEventHandler<HTMLButtonElement> = (e) => {
+        setSelectedRegion((e.target as HTMLButtonElement).value)
     }
 
     return (
@@ -88,8 +87,7 @@ export const Community = () => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            Join the Community
-                            <IconArrowRight className="inline-flex mb-1 ml-1" size={20} stroke={2} />
+                            Join the Community <FontAwesomeIcon icon={faArrowRight} />
                         </a>
                     </Card>
                 </div>
