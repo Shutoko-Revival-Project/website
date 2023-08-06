@@ -27,7 +27,6 @@ export const Download = () => {
                         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y4Ku4wyiTl8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
                     <div className="flex flex-col w-full divide-y divide-gray-500 lg:w-2/5">
-                        {/* Installer */}
                         <div className="pt-16 pb-8 lg:pt-0">
                             <span className="text-4xl text-blue-100">Track</span>
 
