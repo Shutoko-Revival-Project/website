@@ -6,15 +6,12 @@ import { IconArrowRight } from '@tabler/icons';
 import { Card, CardBody, CardTitle } from '../utils/Card';
 import Container from '../utils/Container';
 import { Button } from '../utils/Button';
+import GameServer from './GameServer';
 
 const MapDisplay = dynamic<MapProps>(
     () => import('@flybywiresim/react-components').then((mod) => mod.Map),
     { ssr: false },
 );
-
-const LIVE_FLIGHTS_ENDPOINT = 'https://api.flybywiresim.com/txcxn/_count';
-const COMMIT_COUNT_ENDPOINT = 'https://api.github.com/repos/flybywiresim/a32nx/commits?per_page=1';
-const CONTRIBUTOR_COUNT_ENDPOINT = 'https://api.github.com/repos/flybywiresim/a32nx/contributors?per_page=1';
 
 const Statistic = (props: {statCount: string, statName: string}) => (
     <div id={props.statName}>
@@ -24,31 +21,22 @@ const Statistic = (props: {statCount: string, statName: string}) => (
 );
 
 export const Community = () => {
-    const [liveFlights, setLiveFlights] = useState('0');
-    const [commitCount, setCommitCount] = useState('0');
-    const [contributorCount, setContributorCount] = useState('0');
-    const [mapRefreshInterval, setMapRefreshInterval] = useState(5_000);
-    useEffect(() => {
-        fetch(LIVE_FLIGHTS_ENDPOINT).then((res) => res.text().then((flights) => setLiveFlights(flights)));
+    const serversChoiceBlankState = ({ allServers: false, asianServers: false, eurServers: false, usServers: false, favoriteServers: false})
+    const [ serversChoice, setServersChoice ] = useState({ allServers: false, asianServers: false, eurServers: false, usServers: true, favoriteServers: false})
 
-        fetch(COMMIT_COUNT_ENDPOINT).then((res) => {
-            const commitCount = res.headers.get('Link')?.match(/&page=(\d+)>; rel="last"/)?.[1] ?? '0';
+    const displayServers = (e) => {
+        const value = e.target.value
+        if(value === 'asia') {
+            setServersChoice({ ...serversChoiceBlankState, asianServers: true})
+        }
+        else if(value === 'europe') {
+            setServersChoice({ ...serversChoiceBlankState, eurServers: true})
+        }
+        else if(value === 'us east') {
+            setServersChoice({ ...serversChoiceBlankState, usServers: true})
+        }
+    }
 
-            setCommitCount(commitCount);
-        });
-
-        fetch(CONTRIBUTOR_COUNT_ENDPOINT).then((res) => {
-            const commitCount = res.headers.get('Link')?.match(/&page=(\d+)>; rel="last"/)?.[1] ?? '0';
-
-            setContributorCount(commitCount);
-        });
-
-        const interval = setInterval(() => {
-            setMapRefreshInterval(document.visibilityState === 'visible' ? 10_000 : 100_000);
-        }, 100);
-
-        return () => clearInterval(interval);
-    }, []);
     return (
         <section id="community" className="flex flex-col justify-between items-center text-blue-dark-contrast bg-gray-50 lg:flex-row">
             <Container className="flex flex-col py-12 max-w-6xl lg:px-24">
@@ -90,67 +78,60 @@ export const Community = () => {
                 </div>
             </Container>
             <div className="flex flex-col w-full divide-y divide-gray-500 lg:w-2/5 m-auto">
-                        {/* Installer */}
-                        <div className="pt-16 pb-8 lg:pt-0">
-                            <span className="text-4xl text-blue-light">Official Servers</span>
+                {/* Installer */}
+                <div className="pt-16 pb-8 lg:pt-0">
+                    <span className="text-4xl text-blue-light">Official Servers</span>
 
-                            <p className="mt-4 mb-6 max-w-prose">
-                                Servers hosted by the Shutoko Revival Project Team, focused on Street Racing.
-                            </p>
+                    <p className="mt-4 mb-6 max-w-prose">
+                        Servers hosted by the Shutoko Revival Project Team, focused on Street Racing.
+                    </p>
 
-                            <div className="text-sm font-medium text-center text-gray-500 border-gray-200">
-                                <ul className="flex flex-wrap -mb-px">
-                                    <li className="mr-2">
-                                        <a href="#" className="inline-block p-4 border-b-2 rounded-t-lg active text-blue-light border-blue-light" aria-current="page">Europe</a>
-                                    </li>
-                                    <li className="mr-2">
-                                        <a href="#" className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:border-gray-400 hover:text-gray-600">US East</a>
-                                    </li>
-                                    <li className="mr-2">
-                                        <a href="#" className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:border-gray-400 hover:text-gray-600">Asia</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="divide-y divide-gray-400">
-                                <div className="flex flex-row justify-between items-center mb-3">
-                                    <span className="text-xl">EU 1 - No Traffic</span>
-                                    <span className="text-xl ml-auto mr-6">23/40</span>
-                                    <a href="#">
-                                        <Button className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
-                                    </a>
-                                </div>
-                                <div className="flex flex-row justify-between items-center pt-3 mb-3">
-                                    <span className="text-xl">EU 2 - Traffic</span>
-                                    <span className="text-xl ml-auto mr-6">23/40</span>
-                                    <a href="#">
-                                        <Button className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
-                                    </a>
-                                </div>
-                                <div className="flex flex-row justify-between items-center pt-3 mb-3">
-                                    <span className="text-xl">EU 3 - Traffic - Street Car Pack</span>
-                                    <span className="text-xl ml-auto mr-6">23/40</span>
-                                    <a href="#">
-                                        <Button className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
-                                    </a>
-                                </div>
-                                <div className="flex flex-row justify-between items-center pt-3 mb-3">
-                                    <span className="text-xl">EU 4 - Traffic</span>
-                                    <span className="text-xl ml-auto mr-6">23/40</span>
-                                    <a href="#">
-                                        <Button className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
-                                    </a>
-                                </div>
-                                <div className="flex flex-row justify-between items-center pt-3 mb-3">
-                                    <span className="text-xl">EU PTB - Traffic</span>
-                                    <span className="text-xl ml-auto mr-6">23/40</span>
-                                    <a href="#">
-                                        <Button className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light">Join</Button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="text-sm font-medium text-center text-gray-500 border-gray-200">
+                        <ul className="flex flex-wrap -mb-px">
+                            <li className="mr-2">
+                                <button onClick={displayServers} value={'europe'}>Europe</button>
+                            </li>
+                            <li className="mr-2">
+                                <button onClick={displayServers} value={'us east'}>US East</button>
+                            </li>
+                            <li className="mr-2">
+                                <button onClick={displayServers} value={'asia'}>Asia</button>
+                            </li>
+                        </ul>
                     </div>
+
+                    <div className="divide-y divide-gray-400">
+                        {
+                            serversChoice.asianServers &&
+                            <>
+                                <GameServer serverApiUrl={`/api/getAsia1`} serverName={'Asia 1 - No Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=15.235.162.98&httpPort=8081"} />
+                                <GameServer serverApiUrl={`/api/getAsia2`} serverName={'Asia 2 - Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=15.235.162.98&httpPort=8082"} />
+                                <GameServer serverApiUrl={`/api/getAsia3`} serverName={'Asia 3 - Traffic - Street Car Pack'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=15.235.162.98&httpPort=8083"} />
+                            </>
+                        }
+                        {
+                            serversChoice.eurServers &&
+                            <>
+                                <GameServer serverApiUrl={`/api/getEur1`} serverName={'Eur 1 - No Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=65.108.176.35&httpPort=8081"} />
+                                <GameServer serverApiUrl={`/api/getEur2`} serverName={'Eur 2 - Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=65.108.176.35&httpPort=8082"} />
+                                <GameServer serverApiUrl={`/api/getEur3`} serverName={'Eur 3 - Traffic - Street Car Pack'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=65.108.176.35&httpPort=8083"} />
+                                <GameServer serverApiUrl={`/api/getEur4`} serverName={'Eur 4 - Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=65.108.176.35&httpPort=8085"} />
+                                <GameServer serverApiUrl={`/api/getEurPTB`} serverName={'Eur PTB - Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=65.108.176.35&httpPort=8084"} />
+                            </>
+                        }
+                        {
+                            serversChoice.usServers &&
+                            <>
+                                <GameServer serverApiUrl={`/api/getUSEast1`} serverName={'US East 1 - No Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=5.161.43.117&httpPort=8082"} />
+                                <GameServer serverApiUrl={`/api/getUSEast2`} serverName={'US East 2 - Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=5.161.43.117&httpPort=8081"} />
+                                <GameServer serverApiUrl={`/api/getUSEast3`} serverName={'US East 3 - Traffic - Street Car Pack'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=5.161.43.117&httpPort=8083"} />
+                                <GameServer serverApiUrl={`/api/getUSEast4`} serverName={'US East 4 - Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=5.161.43.117&httpPort=8084"} />
+                                <GameServer serverApiUrl={`/api/getUSEastPTB`} serverName={'US East PTB - Traffic'} serverLink={"https://acstuff.ru/s/q:race/online/join?ip=5.161.43.117&httpPort=8085"} />
+                            </>
+                        }
+                    </div>
+                </div>
+            </div>
         </section>
     );
 };
