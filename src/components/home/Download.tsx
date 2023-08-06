@@ -2,9 +2,8 @@ import { Button } from '../utils/Button';
 
 export const Download = () => {
     const urls = {
-        stable: 'https://github.com/flybywiresim/a32nx/releases/download/assets/stable/A32NX-stable.zip',
-        dev: 'https://github.com/flybywiresim/a32nx/releases/download/assets/master/A32NX-master.zip',
-        exp: 'https://github.com/flybywiresim/a32nx/releases/download/assets/experimental/A32NX-experimental.zip',
+        stable: '#',
+        dev: '#',
     };
 
     const getDownloadLink = (link: string) => `${link}`;
@@ -60,7 +59,7 @@ export const Download = () => {
                                 Contains all cars required to play on our official servers.
                             </p>
 
-                            <a href="https://api.flybywiresim.com/installer">
+                            <a href="#">
                                 <Button className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                             </a>
                         </div>

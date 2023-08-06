@@ -21,7 +21,7 @@ export const Footer = () => (
         <Container className="flex flex-col space-y-2">
 
             <div className="flex gap-x-4 justify-center">
-                {/*<FooterIconItem icon={faGithub} href="https://github.com/flybywiresim" />*/}
+                <FooterIconItem icon={faGithub} href="https://github.com/Shutoko-Revival-Project" />
                 <FooterIconItem icon={faTwitter} href="https://twitter.com/shutokorevival1" />
                 <FooterIconItem icon={faFacebook} href="https://www.facebook.com/ShutokoRevivalProject/" />
                 <FooterIconItem icon={faDiscord} href="https://discord.gg/shutokorevivalproject" />
