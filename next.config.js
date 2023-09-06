@@ -1,3 +1,14 @@
 'use strict';
 
-module.exports = { trailingSlash: true };
+module.exports = {
+    output: 'export',
+    trailingSlash: true,
+    images: {
+        unoptimized: true,
+    },
+    experimental: {
+        images: {
+            unoptimized: true,
+        },
+    },
+};

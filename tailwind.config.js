@@ -57,7 +57,6 @@ module.exports = {
         },
     },
     plugins: [
-        //require('@flybywiresim/tailwind-config'),
         {
             config: {
                 theme: {

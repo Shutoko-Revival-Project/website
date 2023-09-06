@@ -10,8 +10,10 @@ export const Donate = () => (
                 <div className="max-w-4xl text-center lg:text-left">
                     <h1 className="text-teal">Donate</h1>
                     <p className="pt-4 pb-6">
-                        Financial contributions will be used for expenses relating to server growth and upkeep.<br />
-                        Anything in excess of this will be used to purchase material benefitting the project, such as 3D models, and to assist the development team in repairing, maintaining, or upgrading their hardware for better efficiency and stability.
+                        Financial contributions will be used for expenses relating to server growth and upkeep.
+                        <br />
+                        Anything in excess of this will be used to purchase material benefitting the project, such as 3D models,
+                        and to assist the development team in repairing, maintaining, or upgrading their hardware for better efficiency and stability.
                     </p>
                 </div>
                 <div className="flex flex-col items-center space-y-3 space-x-4 text-center md:space-y-0 lg:flex-row lg:items-start lg:text-left">

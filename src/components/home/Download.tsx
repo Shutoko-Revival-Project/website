@@ -24,7 +24,15 @@ export const Download = () => {
                             Need help with installation? Visit the #help channel in our Discord server.
                         </p>
 
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y4Ku4wyiTl8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube-nocookie.com/embed/Y4Ku4wyiTl8"
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                        />
                     </div>
                     <div className="flex flex-col w-full divide-y divide-gray-500 lg:w-2/5">
                         <div className="pt-16 pb-8 lg:pt-0">
@@ -33,7 +41,6 @@ export const Download = () => {
                             <p className="mt-4 mb-6 max-w-prose">
                                 The stable release is required for most servers.
                             </p>
-
 
                             <div className="divide-y divide-gray-700">
                                 <div className="flex flex-row justify-between items-center mb-5">

@@ -6,10 +6,10 @@ import { Download } from '../components/home/Download';
 const Index = () => (
     <>
         <A320Header />
-        {/*<Installer />*/}
+        {/* <Installer /> */}
         <Download />
         <Community />
-        {/*<PartnerSection />*/}
+        {/* <PartnerSection /> */}
         <Donate />
     </>
 );

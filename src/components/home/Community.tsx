@@ -1,12 +1,12 @@
 import { MouseEventHandler, useEffect, useState } from 'react';
 import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Card, CardBody, CardTitle } from '../utils/Card';
 import Container from '../utils/Container';
 import GameServer from './GameServer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-const STATISTICS_ENDPOINT = "http://localhost:5051/Statistics";
+const STATISTICS_ENDPOINT = 'http://localhost:5051/Statistics';
 
 const Statistic = (props: {statCount: string, statName: string}) => (
     <div id={props.statName}>
@@ -30,29 +30,28 @@ interface StatisticsResponse {
 }
 
 export const Community = () => {
-    const [ playerCount, setPlayerCount ] = useState(0)
-    const [ serverCount, setServerCount ] = useState(0)
-    const [ servers, setServers ] = useState<{[region: string]: ServerInfo[]}>({})
-    const [ selectedRegion, setSelectedRegion ] = useState('')
+    const [playerCount, setPlayerCount] = useState(0);
+    const [serverCount, setServerCount] = useState(0);
+    const [servers, setServers] = useState<{[region: string]: ServerInfo[]}>({});
+    const [selectedRegion, setSelectedRegion] = useState('');
 
     useEffect(() => {
         fetch(STATISTICS_ENDPOINT)
             .then((res) => res.json())
             .then((res : StatisticsResponse) => {
-                console.log(res)
-                setPlayerCount(res.numPlayers)
-                setServerCount(res.numServers)
-                setServers(res.servers)
+                setPlayerCount(res.numPlayers);
+                setServerCount(res.numServers);
+                setServers(res.servers);
 
                 if (selectedRegion === '') {
-                    setSelectedRegion(Object.keys(res.servers)[0])
+                    setSelectedRegion(Object.keys(res.servers)[0]);
                 }
-            })
-    }, []);
+            });
+    }, [selectedRegion]);
 
-    const displayServers : MouseEventHandler<HTMLButtonElement> = (e) => {
-        setSelectedRegion((e.target as HTMLButtonElement).value)
-    }
+    const onRegionClicked : MouseEventHandler<HTMLButtonElement> = (e) => {
+        setSelectedRegion((e.target as HTMLButtonElement).value);
+    };
 
     return (
         <section id="community" className="flex flex-col justify-between items-stretch text-blue-dark-contrast bg-gray-50 lg:flex-row">
@@ -78,7 +77,7 @@ export const Community = () => {
                             Discord
                         </CardTitle>
                         <CardBody>
-                            Our Discord server is the place where you can join our community for chatting, development insights and regular events. If you are having technical difficulties, we can help you out aswell!
+                            Our Discord server is the place where you can join us for chatting, progress reports and events. Having trouble? The community is here to help!
                         </CardBody>
 
                         <a
@@ -87,7 +86,8 @@ export const Community = () => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            Join the Community <FontAwesomeIcon icon={faArrowRight} />
+                            Join the Community
+                            <FontAwesomeIcon icon={faArrowRight} />
                         </a>
                     </Card>
                 </div>
@@ -103,23 +103,29 @@ export const Community = () => {
                     <div className="text-sm font-medium text-center text-gray-500 border-gray-200">
                         <ul className="flex flex-wrap -mb-px">
                             {Object.keys(servers).map((server) => {
-
-                                let classes = "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:border-gray-400 hover:text-gray-600"
+                                let classes = 'inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:border-gray-400 hover:text-gray-600';
                                 if (selectedRegion === server) {
-                                    classes = "inline-block p-4 border-b-2 rounded-t-lg active text-blue-light border-blue-light"
+                                    classes = 'inline-block p-4 border-b-2 rounded-t-lg active text-blue-light border-blue-light';
                                 }
 
-                                return <li className="mr-2">
-                                    <button onClick={displayServers} value={server} className={classes}>{server}</button>
-                                </li>
+                                return (
+                                    <li className="mr-2">
+                                        <button type="button" onClick={onRegionClicked} value={server} className={classes}>{server}</button>
+                                    </li>
+                                );
                             })}
                         </ul>
                     </div>
 
                     <div className="divide-y divide-gray-400">
-                        {servers[selectedRegion]?.map((server) => {
-                            return <GameServer name={server.name} clients={server.clients} maxClients={server.maxClients} link={`acmanager://race/online/join?query=race/online/join&ip=${server.address}&httpPort=${server.port}`} />
-                        })}
+                        {servers[selectedRegion]?.map((server) => (
+                            <GameServer
+                                name={server.name}
+                                clients={server.clients}
+                                maxClients={server.maxClients}
+                                link={`acmanager://race/online/join?query=race/online/join&ip=${server.address}&httpPort=${server.port}`}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

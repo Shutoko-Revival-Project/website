@@ -11,14 +11,14 @@ const Custom404 = () => (
             </h1>
         </div>
 
-        {/*<video
+        {/* <video
             className="object-cover absolute top-0 w-screen h-screen opacity-10"
             src="https://cdn.flybywiresim.com/assets/website/video/A32NX.mp4"
             playsInline
             autoPlay
             muted
             loop
-        />*/}
+        /> */}
     </section>
 );
 

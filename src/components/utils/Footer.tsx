@@ -1,8 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
-import Image from 'next/image';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { faDiscord, faFacebook, faGithub, faTwitch, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faFacebook, faGithub, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import Container from './Container';
 
 type IconItemProp = {
@@ -37,7 +35,7 @@ export const Footer = () => (
                 >
                     Source Code
                 </a>
-                {/*<span className="hover:underline cursor-pointer">
+                {/* <span className="hover:underline cursor-pointer">
                     <Link href="/tos">
                         Terms of Service
                     </Link>
@@ -46,7 +44,7 @@ export const Footer = () => (
                     <Link href="/privacy">
                         Privacy Policy
                     </Link>
-                </span>*/}
+                </span> */}
             </div>
 
             <em className="text-center text-teal-100">&copy; 2023 Shutoko Revival Project</em>
