@@ -17,14 +17,24 @@ export const NavLink = ({ name, path, external, className, icon }: LinkProps) =>
             external ? (
                 <a href={path}>
                     <p>
-                        {icon && <FontAwesomeIcon icon={icon} />}
+                        {icon && (
+                            <>
+                                <FontAwesomeIcon icon={icon} />
+                                &nbsp;
+                            </>
+                        )}
                         {name}
                     </p>
                 </a>
             ) : (
                 <Link href={path}>
                     <p>
-                        {icon && <FontAwesomeIcon icon={icon} />}
+                        {icon && (
+                            <>
+                                <FontAwesomeIcon icon={icon} />
+                                &nbsp;
+                            </>
+                        )}
                         {name}
                     </p>
                 </Link>

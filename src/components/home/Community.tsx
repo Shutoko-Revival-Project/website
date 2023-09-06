@@ -46,7 +46,8 @@ export const Community = () => {
                 if (selectedRegion === '') {
                     setSelectedRegion(Object.keys(res.servers)[0]);
                 }
-            });
+            })
+            .catch((err) => console.log(err));
     }, [selectedRegion]);
 
     const onRegionClicked : MouseEventHandler<HTMLButtonElement> = (e) => {
@@ -72,7 +73,7 @@ export const Community = () => {
                     <Card bgColour="gray-100" className="border-discord shadow-lg">
                         <CardTitle>
                             <span className="flex justify-center items-center p-2 mr-2 bg-discord rounded-xl">
-                                <Image src="/svg/discordLogo.svg" width={23} height={23} />
+                                <Image src="/svg/discordLogo.svg" width={23} height={23} alt="Discord Logo" />
                             </span>
                             Discord
                         </CardTitle>
