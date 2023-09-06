@@ -4,6 +4,7 @@ export const Download = () => {
     const urls = {
         stable: '#',
         dev: '#',
+        cars: 'https://files.shutokorevivalproject.com/SRP_Car_Pack_3.2+Traffic_Cars_1.21.7z',
     };
 
     const getDownloadLink = (link: string) => `${link}`;
@@ -45,27 +46,26 @@ export const Download = () => {
                             <div className="divide-y divide-gray-700">
                                 <div className="flex flex-row justify-between items-center mb-5">
                                     <span className="text-xl text-gray-300">Stable Release</span>
-                                    <a href={getDownloadLink(urls.stable)}>
+                                    <a href={getDownloadLink(urls.stable)} rel="nofollow">
                                         <Button className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                                     </a>
                                 </div>
                                 <div className="flex flex-row justify-between items-center pt-5 mb-5">
                                     <span className="text-xl text-gray-300">Public Testing Build</span>
-                                    <a href={getDownloadLink(urls.dev)}>
+                                    <a href={getDownloadLink(urls.dev)} rel="nofollow">
                                         <Button className="float-right w-40 font-bold text-blue-light hover:text-blue-light hover:bg-white border-2 border-blue-light">Download</Button>
                                     </a>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Direct Download */}
                         <div className="pt-7">
                             <span className="text-2xl text-blue-100">Car Pack</span>
                             <p className="mt-4 mb-6 max-w-prose">
                                 Contains all cars required to play on our official servers.
                             </p>
 
-                            <a href="#">
+                            <a href={getDownloadLink(urls.cars)} rel="nofollow">
                                 <Button className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                             </a>
                         </div>

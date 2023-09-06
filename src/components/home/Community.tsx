@@ -6,7 +6,7 @@ import { Card, CardBody, CardTitle } from '../utils/Card';
 import Container from '../utils/Container';
 import GameServer from './GameServer';
 
-const STATISTICS_ENDPOINT = 'http://localhost:5051/Statistics';
+const STATISTICS_ENDPOINT = 'https://api.shutokorevivalproject.com/Statistics';
 
 const Statistic = (props: {statCount: string, statName: string}) => (
     <div id={props.statName}>
@@ -66,7 +66,7 @@ export const Community = () => {
                 <div className="grid grid-cols-2 gap-y-8 my-6 sm:grid-cols-4">
                     <Statistic statCount={playerCount.toString()} statName="Drivers Online" />
                     <Statistic statCount={serverCount.toString()} statName="Servers" />
-                    <Statistic statCount="700k+" statName="Discord Members" />
+                    <Statistic statCount="600k+" statName="Discord Members" />
                 </div>
 
                 <div className="my-8">

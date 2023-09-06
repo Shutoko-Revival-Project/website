@@ -10,7 +10,7 @@ const App = ({ Component, pageProps }: AppProps) => (
         <Head>
             <meta charSet="utf-8" />
 
-            <meta name="theme-color" content="#00c2cc" />
+            <meta name="theme-color" content="#d16162" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
 
             <title>Shutoko Revival Project</title>
