@@ -1,16 +1,22 @@
+import { useState } from 'react';
 import { Button } from '../utils/Button';
+import { TermsModal } from '../utils/TermsModal';
 
 export const Download = () => {
+    const [openModal, setOpenModal] = useState<string | undefined>();
+    const props = { openModal, setOpenModal };
+
     const urls = {
-        stable: '#',
-        dev: '#',
+        stable: '#stable',
+        dev: '#ptb',
         cars: 'https://files.shutokorevivalproject.com/SRP_Car_Pack_3.2+Traffic_Cars_1.21.7z',
     };
 
-    const getDownloadLink = (link: string) => `${link}`;
-
     return (
         <section id="download" className="relative bg-blue-dark-contrast">
+
+            <TermsModal show={props.openModal !== undefined} url={props.openModal} onClose={() => props.setOpenModal(undefined)} />
+
             <div className="py-14 px-10 m-auto w-full lg:w-11/12 2xl:w-4/6">
                 <div className="flex flex-col lg:flex-row">
                     <div className="w-full lg:pr-12 lg:w-3/5">
@@ -46,15 +52,16 @@ export const Download = () => {
                             <div className="divide-y divide-gray-700">
                                 <div className="flex flex-row justify-between items-center mb-5">
                                     <span className="text-xl text-gray-300">Stable Release</span>
-                                    <a href={getDownloadLink(urls.stable)} rel="nofollow">
-                                        <Button className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
-                                    </a>
+                                    <Button onClick={() => props.setOpenModal(urls.stable)} className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                                 </div>
                                 <div className="flex flex-row justify-between items-center pt-5 mb-5">
                                     <span className="text-xl text-gray-300">Public Testing Build</span>
-                                    <a href={getDownloadLink(urls.dev)} rel="nofollow">
-                                        <Button className="float-right w-40 font-bold text-blue-light hover:text-blue-light hover:bg-white border-2 border-blue-light">Download</Button>
-                                    </a>
+                                    <Button
+                                        onClick={() => props.setOpenModal(urls.dev)}
+                                        className="float-right w-40 font-bold text-blue-light hover:text-blue-light hover:bg-white border-2 border-blue-light"
+                                    >
+                                        Download
+                                    </Button>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +72,7 @@ export const Download = () => {
                                 Contains all cars required to play on our official servers.
                             </p>
 
-                            <a href={getDownloadLink(urls.cars)} rel="nofollow">
+                            <a href={urls.cars} rel="nofollow">
                                 <Button className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                             </a>
                         </div>

@@ -87,7 +87,7 @@ export const Community = () => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            Join the Community
+                            Join the Community&nbsp;
                             <FontAwesomeIcon icon={faArrowRight} />
                         </a>
                     </Card>
