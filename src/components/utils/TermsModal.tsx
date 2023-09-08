@@ -26,39 +26,42 @@ export const TermsModal = (props: TermsModalProps) => {
         <Modal show={props.show} onClose={onClose}>
             <Modal.Header>Terms of Use</Modal.Header>
             <Modal.Body>
-                <div className="space-y-6">
+                <div className="space-y-3">
                     <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        <strong>You ARE ALLOWED to:</strong>
-                        <br />
-                        Use the SRP track as is, for entertainment, training or education.
-                        <br />
-                        Create media (screenshots, videos, art, etc) that uses the SRP track.
-                        <br />
-                        Offer services, free, paid or otherwise, that use the SRP track without conflicting with these terms.
-                        <br />
-                        You may contact us at shutokorevivalproject@gmail.com for clarification should you need it.
+                        <strong>You are ALLOWED to:</strong>
+                        <ul className="list-disc pl-5">
+                            <li>Use the SRP track as is, for entertainment, training or education.</li>
+                            <li>Create media (screenshots, videos, art, etc) that uses the SRP track.</li>
+                            <li>
+                                Offer services, free, paid or otherwise, that use the SRP track without conflicting with these terms.
+                                You may contact us at shutokorevivalproject@gmail.com for clarification should you need it.
+                            </li>
+                        </ul>
                     </p>
                     <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         <strong>You are NOT ALLOWED to:</strong>
-                        <br />
-                        Re-upload or re-host the SRP files. If you'd like to share the files to your community you may do so by using our original upload links,
-                        links to our Discord server or our website.
-                        <br />
-                        Modify the SRP files. The files are encrypted for a reason. You may not add, remove or alter the files in any way without our explicit written permission.
-                        This includes texture modifications, model additions/removals and ports to other platforms.
-                        <br />
-                        Restrict the SRP files behind paid access. Shutoko Revival Project is and will remain free to download and use,
-                        as long as you have a legal copy of the prerequisite software that SRP runs on.
+                        <ul className="list-disc pl-5">
+                            <li>Re-upload or re-host the SRP files. If you'd like to share the files to your community you may do so by linking to our website or Discord server.</li>
+                            <li>
+                                Modify the SRP files. The files are encrypted for a reason. You may not add, remove or alter the files in any way without our explicit written permission.
+                                This includes texture modifications, model additions/removals and ports to other platforms.
+                            </li>
+                            <li>
+                                Restrict the SRP files behind paid access. Shutoko Revival Project is and will remain free to download and use,
+                                as long as you have a legal copy of the prerequisite software that SRP runs on.
+                            </li>
+                        </ul>
                     </p>
                     <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         <strong>Licensing:</strong>
-                        <br />
-                        "Shuto Metropolitan Expressway" is owned and operated by the Metropolitan Expressway Company Limited (首都高速道路株式会社, Shuto Kōsoku-dōro Kabushiki-gaisha) and thus they are
-                        the holders of any legal rights relevant to the real world assets that SRP replicates.
-                        <br />
-                        The rights of any and all depictions of real world branding within SRP are still held by their respective real world holders.
-                        <br />
-                        The rights of any and all 3rd party content found within SRP are still held by their respective real world holders.
+                        <ul className="list-disc pl-5">
+                            <li>
+                                "Shuto Metropolitan Expressway" is owned and operated by the Metropolitan Expressway Company Limited (首都高速道路株式会社, Shuto Kōsoku-dōro Kabushiki-gaisha)
+                                and thus they are the holders of any legal rights relevant to the real world assets that SRP replicates.
+                            </li>
+                            <li>The rights of any and all depictions of real world branding within SRP are still held by their respective real world holders.</li>
+                            <li>The rights of any and all 3rd party content found within SRP are still held by their respective real world holders.</li>
+                        </ul>
                     </p>
                 </div>
             </Modal.Body>

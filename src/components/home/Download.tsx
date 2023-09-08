@@ -41,7 +41,7 @@ export const Download = () => {
                             allowFullScreen
                         />
                     </div>
-                    <div className="flex flex-col w-full divide-y divide-gray-500 lg:w-2/5">
+                    <div className="flex flex-col w-full divide-y divide-blue-dark lg:w-2/5">
                         <div className="pt-16 pb-8 lg:pt-0">
                             <span className="text-4xl text-blue-100">Track</span>
 
@@ -49,7 +49,7 @@ export const Download = () => {
                                 The stable release is required for most servers.
                             </p>
 
-                            <div className="divide-y divide-gray-700">
+                            <div className="divide-y divide-blue-darker">
                                 <div className="flex flex-row justify-between items-center mb-5">
                                     <span className="text-xl text-gray-300">Stable Release</span>
                                     <Button onClick={() => props.setOpenModal(urls.stable)} className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>

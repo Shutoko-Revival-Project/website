@@ -148,7 +148,11 @@ module.exports = {
                                 '200': '#d6a1c0',
                             },
                             grey: {
-                                'light': '#D4DADC'
+                                'light': '#D4DADC',
+                            },
+                            // used for flowbite modal backdrop
+                            gray: {
+                                '900': '#3d383b',
                             }
                         },
                         boxShadow: {

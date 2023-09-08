@@ -44,7 +44,17 @@ export const Community = () => {
                 setServers(res.servers);
 
                 if (selectedRegion === '') {
-                    setSelectedRegion(Object.keys(res.servers)[0]);
+                    let highestRegion = Object.keys(res.servers)[0];
+                    let highestCount = 0;
+                    for (const region of Object.keys(res.servers)) {
+                        const count = res.servers[region].map((s) => s.clients).reduce((acc, clients) => acc + clients);
+                        if (count > highestCount) {
+                            highestRegion = region;
+                            highestCount = count;
+                        }
+                    }
+
+                    setSelectedRegion(highestRegion);
                 }
             })
             .catch((err) => console.log(err));
@@ -110,7 +120,7 @@ export const Community = () => {
                                 }
 
                                 return (
-                                    <li className="mr-2">
+                                    <li className="mr-2 text-xl font-semibold">
                                         <button type="button" onClick={onRegionClicked} value={server} className={classes}>{server}</button>
                                     </li>
                                 );
