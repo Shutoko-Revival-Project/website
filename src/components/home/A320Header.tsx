@@ -12,6 +12,7 @@ export const A320Header = () => (
             autoPlay
             muted
             loop
+            disablePictureInPicture
         />
         <Container className="relative max-w-6xl min-h-screen">
             <div className="absolute bottom-0 left-0 h-2/3 px-page">

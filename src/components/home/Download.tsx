@@ -32,8 +32,7 @@ export const Download = () => {
                         </p>
 
                         <iframe
-                            width="560"
-                            height="315"
+                            className="youtube-video"
                             src="https://www.youtube-nocookie.com/embed/Y4Ku4wyiTl8"
                             title="YouTube video player"
                             frameBorder="0"
