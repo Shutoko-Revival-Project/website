@@ -5,19 +5,13 @@ import Container from '../utils/Container';
 
 export const A320Header = () => (
     <header>
-        {/* <video
+        <video
             className="object-cover fixed -z-10 w-screen h-screen opacity-10"
-            src="https://cdn.flybywiresim.com/assets/website/video/A32NX.mp4"
+            src="https://files.shutokorevivalproject.com/srp-bg.mp4"
             playsInline
             autoPlay
             muted
             loop
-        /> */}
-        <img
-            draggable="false"
-            className="object-cover fixed -z-10 w-screen h-screen opacity-10"
-            src="/img/Screenshot_trw_mazda_rx7_feed_shuto_revival_project_beta_4-5-123-15-12-0.png"
-            alt=""
         />
         <Container className="relative max-w-6xl min-h-screen">
             <div className="absolute bottom-0 left-0 h-2/3 px-page">

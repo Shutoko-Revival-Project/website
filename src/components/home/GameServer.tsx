@@ -15,7 +15,7 @@ const GameServer: React.FC<{ name: string, link: string, clients: number, maxCli
         </span>
         <a href={link}>
             <Button
-                className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-blue-light hover:bg-white border-2 border-blue-light"
+                className="float-right w-40 focus:outline-none transition rounded-full py-3 font-bold text-white hover:text-blue-light bg-green-500 hover:bg-green-700"
             >
                 Join
             </Button>
