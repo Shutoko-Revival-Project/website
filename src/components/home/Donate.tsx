@@ -4,7 +4,7 @@ import Container from '../utils/Container';
 export const Donate = () => (
     <section className="bg-blue-darker">
         <div className="relative">
-            <img className="object-cover absolute w-full h-full opacity-10" src="/img/2023-06-03-20-54-59-bw-shuto_revival_project_beta-ddm_honda_civic_fd2.png" alt="" />
+            <img className="object-cover absolute w-full h-full opacity-20" src="/img/2023-06-03-20-54-59-bw-shuto_revival_project_beta-ddm_honda_civic_fd2.png" alt="" />
 
             <Container className="flex relative top-0 flex-col items-center py-12 max-w-7xl lg:items-start">
                 <div className="max-w-4xl text-center lg:text-left">

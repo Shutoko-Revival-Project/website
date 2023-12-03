@@ -12,7 +12,7 @@ const Custom404 = () => (
         </div>
 
         <video
-            className="object-cover fixed -z-10 w-screen h-screen opacity-10"
+            className="object-cover fixed -z-10 w-screen h-screen opacity-20"
             src="https://files.shutokorevivalproject.com/srp-bg.mp4"
             playsInline
             autoPlay
