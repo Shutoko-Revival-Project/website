@@ -7,8 +7,8 @@ export const Download = () => {
     const props = { openModal, setOpenModal };
 
     const urls = {
-        stable: '#stable',
-        dev: '#ptb',
+        stable: 'https://downloads.shutokorevivalprojectjohn.workers.dev/stable.txt',
+        dev: 'https://downloads.shutokorevivalprojectjohn.workers.dev/ptb.txt',
         cars: 'https://files.shutokorevivalproject.com/SRP_Car_Pack_3.2+Traffic_Cars_1.21.7z',
     };
 
