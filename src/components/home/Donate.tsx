@@ -8,7 +8,7 @@ export const Donate = () => (
 
             <Container className="flex relative top-0 flex-col items-center py-12 max-w-7xl lg:items-start">
                 <div className="max-w-4xl text-center lg:text-left">
-                    <h1 className="text-teal">Donate</h1>
+                    <h1 className="text-teal">Patreon</h1>
                     <p className="pt-4 pb-6">
                         Financial contributions will be used for expenses relating to server growth and upkeep.
                         <br />
