@@ -48,6 +48,10 @@ export const Footer = () => (
             </div>
 
             <em className="text-center text-teal-100">&copy; 2023 Shutoko Revival Project</em>
+            <em className="text-center text-teal-100">
+                Background video by
+                <a className="hover:underline" href="https://www.youtube.com/@osaxosa">OSA X</a>
+            </em>
         </Container>
     </footer>
 );
