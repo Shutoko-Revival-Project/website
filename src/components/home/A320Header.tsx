@@ -18,7 +18,7 @@ export const A320Header = () => (
             <div className="absolute bottom-0 left-0 h-2/3 px-page">
                 <Image src="/svg/srp-logo-text-gradient.svg" width="500" height="160" alt="SRP Logo" />
                 <p className="pt-5 max-w-xl">
-                    The definitive version of Shutoko, otherwise known as Tokyo Metropolitan Expressway, or the Wangan.
+                    The definitive version of Shutoko, otherwise known as Tokyo Metropolitan Expressway.
                     <br />
                     Exclusively for Assetto Corsa.
                 </p>
