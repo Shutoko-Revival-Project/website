@@ -76,7 +76,7 @@ export const Community = () => {
                 <div className="grid grid-cols-2 gap-y-8 my-6 sm:grid-cols-4">
                     <Statistic statCount={playerCount.toString()} statName="Drivers Online" />
                     <Statistic statCount={serverCount.toString()} statName="Servers" />
-                    <Statistic statCount="600k+" statName="Discord Members" />
+                    <Statistic statCount="650k+" statName="Discord Members" />
                 </div>
 
                 <div className="my-8">
