@@ -15,7 +15,7 @@ export const NavLink = ({ name, path, external, className, icon }: LinkProps) =>
     <li className={`list-none transition w-full cursor-pointer hover:text-teal ${className}`}>
         {
             external ? (
-                <a href={path}>
+                <a href={path} target="_blank" rel="noreferrer">
                     <p>
                         {icon && (
                             <>

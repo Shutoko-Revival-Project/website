@@ -66,8 +66,8 @@ export const Download = () => {
                         </div>
 
                         <div className="pt-7">
-                            <span className="text-2xl text-blue-100">Car Pack</span>
-                            <div className="flex flex-row justify-between items-center mb-5">
+                            <span className="text-4xl text-blue-100">Car Pack</span>
+                            <div className="flex flex-row justify-between items-center mb-5 mt-4">
                                 <span className="text-xl text-gray-300">Contains all cars required to play on our official servers.</span>
                                 <a href={urls.cars} rel="nofollow">
                                     <Button className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
