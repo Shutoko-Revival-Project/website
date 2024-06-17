@@ -8,7 +8,7 @@ export const Download = () => {
 
     const urls = {
         stable: 'https://files.shutokorevivalproject.com/r/SRP%20MAIN_0.9.1_OFFICIAL.7z',
-        dev: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3%20PTB1%20Release.7z',
+        dev: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3%20PTB2.7z',
         cars: 'https://files.shutokorevivalproject.com/SRP_Car_Pack_3.3.7z',
     };
 
