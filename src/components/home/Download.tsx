@@ -8,13 +8,13 @@ export const Download = () => {
 
     const urls = {
         stable: 'https://files.shutokorevivalproject.com/r/SRP%20MAIN_0.9.1_OFFICIAL.7z',
-        dev: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3%20PTB2.7z',
+        ptb: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3%20PTB2.7z',
         cars: 'https://files.shutokorevivalproject.com/SRP_Car_Pack_3.3.7z',
     };
 
     const versions = {
         stable: '0.9.1',
-        dev: '0.9.3 PTB2',
+        ptb: '0.9.3 PTB2',
         cars: '3.3',
     };
 
@@ -64,9 +64,13 @@ export const Download = () => {
                                     <Button onClick={() => props.setOpenModal(urls.stable)} className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                                 </div>
                                 <div className="flex flex-row justify-between items-center pt-5 mb-4">
-                                    <span id="ptb-download-text" className="text-xl text-gray-300">Public Testing Build (0.9.3 PTB2)</span>
+                                    <span id="ptb-download-text" className="text-xl text-gray-300">
+                                        Public Testing Build
+                                        {' '}
+                                        <span id="version-check-ptb" style={{ display: 'inline' }}>{versions.ptb}</span>
+                                        </span>
                                     <Button
-                                        onClick={() => props.setOpenModal(urls.dev)}
+                                        onClick={() => props.setOpenModal(urls.ptb)}
                                         className="float-right w-40 font-bold text-blue-light hover:text-blue-light hover:bg-white border-2 border-blue-light"
                                     >
                                         Download
