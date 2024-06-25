@@ -56,11 +56,13 @@ export const Download = () => {
 
                             <div className="">
                                 <div className="flex flex-row justify-between items-center mb-2">
-                                    <span id='stable-download-text' className="text-xl text-gray-300">Stable Release {versions.stable}</span>
+                                    <span id="stable-download-text" className="text-xl text-gray-300">
+                                        Stable Release {versions.stable}
+                                    </span>
                                     <Button onClick={() => props.setOpenModal(urls.stable)} className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                                 </div>
                                 <div className="flex flex-row justify-between items-center pt-5 mb-4">
-                                    <span id='ptb-download-text' className="text-xl text-gray-300">Public Testing Build (0.9.3 PTB2)</span>
+                                    <span id="ptb-download-text" className="text-xl text-gray-300">Public Testing Build (0.9.3 PTB2)</span>
                                     <Button
                                         onClick={() => props.setOpenModal(urls.dev)}
                                         className="float-right w-40 font-bold text-blue-light hover:text-blue-light hover:bg-white border-2 border-blue-light"
