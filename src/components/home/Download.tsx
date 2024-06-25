@@ -13,7 +13,7 @@ export const Download = () => {
     };
 
     const versions = {
-        stable: 'v0.9.1',
+        stable: '0.9.1',
         dev: '0.9.3 PTB2',
         cars: '3.3',
     };
@@ -59,7 +59,7 @@ export const Download = () => {
                                     <span id="stable-download-text" className="text-xl text-gray-300">
                                         Stable Release
                                         {' '}
-                                        {versions.stable}
+                                        <span id="version-check-stable" style={{ display: 'inline' }}>{versions.stable}</span>
                                     </span>
                                     <Button onClick={() => props.setOpenModal(urls.stable)} className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                                 </div>
