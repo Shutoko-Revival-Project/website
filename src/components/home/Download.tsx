@@ -55,6 +55,7 @@ export const Download = () => {
                                 </div>
                                 <div className="flex flex-row justify-between items-center pt-5 mb-4">
                                     <span className="text-xl text-gray-300">Public Testing Build (0.9.3)</span>
+                                    <span id="version-check-ptb" style="display:none">0.9.3 PTB2</span>
                                     <Button
                                         onClick={() => props.setOpenModal(urls.dev)}
                                         className="float-right w-40 font-bold text-blue-light hover:text-blue-light hover:bg-white border-2 border-blue-light"
