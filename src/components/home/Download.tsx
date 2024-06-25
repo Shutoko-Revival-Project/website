@@ -15,8 +15,8 @@ export const Download = () => {
     const versions = {
         stable: 'v0.9.1',
         dev: '0.9.3 PTB2',
-        cars: '3.3'
-    }
+        cars: '3.3',
+    };
 
     return (
         <section id="download" className="relative bg-blue-dark-contrast">
