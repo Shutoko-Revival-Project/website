@@ -68,7 +68,7 @@ export const Download = () => {
                                         Public Testing Build
                                         {' '}
                                         <span id="version-check-ptb" style={{ display: 'inline' }}>{versions.ptb}</span>
-                                        </span>
+                                    </span>
                                     <Button
                                         onClick={() => props.setOpenModal(urls.ptb)}
                                         className="float-right w-40 font-bold text-blue-light hover:text-blue-light hover:bg-white border-2 border-blue-light"
