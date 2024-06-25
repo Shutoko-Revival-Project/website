@@ -57,7 +57,8 @@ export const Download = () => {
                             <div className="">
                                 <div className="flex flex-row justify-between items-center mb-2">
                                     <span id="stable-download-text" className="text-xl text-gray-300">
-                                        Stable Release {versions.stable}
+                                        Stable Release{' '}
+                                        {versions.stable}
                                     </span>
                                     <Button onClick={() => props.setOpenModal(urls.stable)} className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                                 </div>
