@@ -8,13 +8,13 @@ export const Download = () => {
 
     const urls = {
         stable: 'https://files.shutokorevivalproject.com/r/SRP%20MAIN_0.9.1_OFFICIAL.7z',
-        ptb: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3%20PTB2.7z',
+        ptb: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3%20PTB3.7z',
         cars: 'https://files.shutokorevivalproject.com/SRP_Car_Pack_3.3.7z',
     };
 
     const versions = {
         stable: '0.9.1',
-        ptb: '0.9.3 PTB2',
+        ptb: '0.9.3 PTB3',
         cars: '3.3',
     };
 
