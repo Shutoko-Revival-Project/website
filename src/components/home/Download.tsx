@@ -72,7 +72,7 @@ export const Download = () => {
                                         {' '}
                                         <span id="version-check-stable-old" style={{ display: 'inline' }}>{versions.stable_old}</span>
                                     </span>
-                                    <Button onClick={() => props.setOpenModal(urls.stable_old)} className="float-right w-40 font-bold text-blue-light hover:text-blue-light hover:bg-white">Download</Button>
+                                    <Button onClick={() => props.setOpenModal(urls.stable_old)} className="float-right w-40 font-bold hover:bg-white">Download</Button>
                                 </div>
 
                                 {/* <div className="flex flex-row justify-between items-center pt-5 mb-4" style={{ display: 'none' }}>
