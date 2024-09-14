@@ -7,13 +7,15 @@ export const Download = () => {
     const props = { openModal, setOpenModal };
 
     const urls = {
-        stable: 'https://files.shutokorevivalproject.com/r/SRP%20MAIN_0.9.1_OFFICIAL.7z',
+        stable: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3.7z',
+        stable_old: 'https://files.shutokorevivalproject.com/r/SRP%20MAIN_0.9.1_OFFICIAL.7z',
         ptb: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3%20PTB3.7z',
         cars: 'https://files.shutokorevivalproject.com/SRP_Car_Pack_3.3.7z',
     };
 
     const versions = {
-        stable: '0.9.1',
+        stable: '0.9.3',
+        stable_old: '0.9.1',
         ptb: '0.9.3 PTB3',
         cars: '3.3',
     };
@@ -63,7 +65,15 @@ export const Download = () => {
                                     </span>
                                     <Button onClick={() => props.setOpenModal(urls.stable)} className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                                 </div>
-                                <div className="flex flex-row justify-between items-center pt-5 mb-4">
+                                <div className="flex flex-row justify-between items-center mb-2">
+                                    <span id="stable-download-text-old" className="text-xl text-gray-300">
+                                        Old Stable Release
+                                        {' '}
+                                        <span id="version-check-stable" style={{ display: 'inline' }}>{versions.stable_old}</span>
+                                    </span>
+                                    <Button onClick={() => props.setOpenModal(urls.stable_old)} className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
+                                </div>
+                                <div className="flex flex-row justify-between items-center pt-5 mb-4" style="display:none">
                                     <span id="ptb-download-text" className="text-xl text-gray-300">
                                         Public Testing Build
                                         {' '}
