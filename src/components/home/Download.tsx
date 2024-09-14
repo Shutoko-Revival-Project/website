@@ -69,11 +69,11 @@ export const Download = () => {
                                     <span id="stable-download-text-old" className="text-xl text-gray-300">
                                         Old Stable Release
                                         {' '}
-                                        <span id="version-check-stable" style={{ display: 'inline' }}>{versions.stable_old}</span>
+                                        <span id="version-check-stable-old" style={{ display: 'inline' }}>{versions.stable_old}</span>
                                     </span>
                                     <Button onClick={() => props.setOpenModal(urls.stable_old)} className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                                 </div>
-                                <div className="flex flex-row justify-between items-center pt-5 mb-4" style="display:none">
+                                <div className="flex flex-row justify-between items-center pt-5 mb-4" style={{ display: 'none' }}>
                                     <span id="ptb-download-text" className="text-xl text-gray-300">
                                         Public Testing Build
                                         {' '}
