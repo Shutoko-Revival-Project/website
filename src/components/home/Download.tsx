@@ -10,14 +10,14 @@ export const Download = () => {
         stable: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3.7z',
         stable_old: 'https://files.shutokorevivalproject.com/r/SRP%20MAIN_0.9.1_OFFICIAL.7z',
         ptb: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3%20PTB3.7z',
-        cars: 'https://files.shutokorevivalproject.com/SRP_Car_Pack_3.3.7z',
+        cars: 'https://files.shutokorevivalproject.com/SRP_Car_Pack_3.4.7z',
     };
 
     const versions = {
         stable: '0.9.3',
         stable_old: '0.9.1',
         ptb: '0.9.3 PTB3',
-        cars: '3.3',
+        cars: '3.4',
     };
 
     return (
