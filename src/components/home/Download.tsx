@@ -65,20 +65,10 @@ export const Download = () => {
                                     </span>
                                     <Button onClick={() => props.setOpenModal(urls.stable)} className="float-right w-40 font-bold bg-green-500 hover:bg-green-700">Download</Button>
                                 </div>
-                                <div className="flex flex-row justify-between items-center pt-5 mb-4">
-                                    <span id="ptb-download-text" className="text-xl text-gray-300">
-                                        Old Stable Release
-                                        {' '}
-                                        <span id="version-check-stable" style={{ display: 'inline' }}>{versions.stable_old}</span>
-                                    </span>
-                                    <Button
-                                        onClick={() => props.setOpenModal(urls.stable_old)}
-                                        className="float-right w-40 font-bold text-blue-light hover:text-blue-light hover:bg-white border-2 border-blue-light"
-                                    >
-                                        Download
-                                    </Button>
-                                </div>
-
+                                <details>
+                                    <summary>What happened to version 0.9.1?</summary>
+                                    <div>Version 0.9.1 has been removed since support for it has ended. If you are managing a server, please update to the latest version of SRP. If you frequent a server that uses an outdated version of SRP, please inform their staff so they can update.</div>
+                                </details>
                                 {/* <div className="flex flex-row justify-between items-center pt-5 mb-4">
                                     <span id="ptb-download-text" className="text-xl text-gray-300">
                                         Public Testing Build
