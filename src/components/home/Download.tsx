@@ -67,7 +67,7 @@ export const Download = () => {
                                 </div>
                                 <details>
                                     <summary>What happened to version 0.9.1?</summary>
-                                    <div>Version 0.9.1 has been removed since support for it has ended. If you are managing a server, please update to the latest version of SRP. If you frequent a server that uses an outdated version of SRP, please inform their staff so they can update.</div>
+                                    <div>Version 0.9.1 has been removed since support for it has ended. If you are managing a server, please update to the latest version of SRP. If you frequent a server that uses an outdated version of SRP, please inform their staff so they can update. The "Overload Layout" has been renamed to "Main Layout" in version 0.9.3.</div>
                                 </details>
                                 {/* <div className="flex flex-row justify-between items-center pt-5 mb-4">
                                     <span id="ptb-download-text" className="text-xl text-gray-300">
