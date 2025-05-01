@@ -50,7 +50,7 @@ export const NavLinks = (props: { className?: string }) => {
         <span className={`flex flex-col gap-x-4 gap-y-2 md:items-center ${props.className}`}>
             {router.pathname !== '/' && <NavLink name="Home" path="/" />}
             <NavLink name="Leaderboards" external path="https://hub.shutokorevivalproject.com" />
-            <NavLink name="Discord" external path="https://discord.gg/shutokorevivalproject" icon={faDiscord} />
+            <NavLink name="Discord" external path="https://discord.gg/HPTP5S4v" icon={faDiscord} />
         </span>
     );
 };
