@@ -47,7 +47,7 @@ export const Footer = () => (
                 </span> */}
             </div>
 
-            <em className="text-center text-teal-100">&copy; 2023 Shutoko Revival Project</em>
+            <em className="text-center text-teal-100">&copy; 2025 Shutoko Revival Project</em>
             <em className="text-center text-teal-100">
                 Background video by&nbsp;
                 <a className="hover:underline" href="https://www.youtube.com/@osaxosa">OSA X</a>
