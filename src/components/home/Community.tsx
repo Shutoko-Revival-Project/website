@@ -93,7 +93,7 @@ export const Community = () => {
 
                         <a
                             className="self-center py-2 px-3 text-xl font-semibold text-white bg-discord hover:bg-discord-dark rounded-xl transition"
-                            href="https://discord.gg/shutokorevivalproject"
+                            href="https://discord.gg/BvzCM8xvBS"
                             target="_blank"
                             rel="noreferrer"
                         >
