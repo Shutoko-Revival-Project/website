@@ -22,7 +22,7 @@ export const Footer = () => (
                 <FooterIconItem icon={faGithub} href="https://github.com/Shutoko-Revival-Project" />
                 <FooterIconItem icon={faTwitter} href="https://twitter.com/shutokorevival1" />
                 <FooterIconItem icon={faFacebook} href="https://www.facebook.com/ShutokoRevivalProject/" />
-                <FooterIconItem icon={faDiscord} href="https://discord.gg/BvzCM8xvBS" />
+                <FooterIconItem icon={faDiscord} href="https://discord.gg/shutokorevivalproject" />
                 <FooterIconItem icon={faYoutube} href="https://www.youtube.com/@ShutokoRevivalProject" />
             </div>
 
