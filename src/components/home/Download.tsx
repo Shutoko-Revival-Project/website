@@ -9,14 +9,14 @@ export const Download = () => {
     const urls = {
         stable: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3.7z',
         stable_old: 'https://files.shutokorevivalproject.com/r/SRP%20MAIN_0.9.1_OFFICIAL.7z',
-        ptb: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3%20PTB3.7z',
+        ptb: 'https://files.shutokorevivalproject.com/r/SRP%200.9.4%20PTB1.7z',
         cars: 'https://files.shutokorevivalproject.com/SRP_Car_Pack_3.5.7z',
     };
 
     const versions = {
         stable: '0.9.3',
         stable_old: '0.9.1',
-        ptb: '0.9.3 PTB3',
+        ptb: '0.9.4 PTB1',
         cars: '3.4',
     };
 
@@ -69,9 +69,9 @@ export const Download = () => {
                                     <summary>What happened to version 0.9.1? Click for info.</summary>
                                     <div>Version 0.9.1 has been removed since support for it has ended. If you are managing a server, please update to the latest version of SRP.</div>
                                     <div>If you frequent a server that uses an outdated version of SRP, please inform their staff so they can update.</div>
-                                    <div>The "Overload Layout" has been renamed to "Main Layout" in version 0.9.3.</div>
+                                    <div>The "Overload Layout" has been renamed to "Main Layout" since version 0.9.3.</div>
                                 </details>
-                                {/* <div className="flex flex-row justify-between items-center pt-5 mb-4">
+                                <div className="flex flex-row justify-between items-center pt-5 mb-4">
                                     <span id="ptb-download-text" className="text-xl text-gray-300">
                                         Public Testing Build
                                         {' '}
@@ -83,7 +83,7 @@ export const Download = () => {
                                     >
                                         Download
                                     </Button>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
 
