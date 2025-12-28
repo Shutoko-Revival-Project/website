@@ -10,7 +10,7 @@ export const Download = () => {
         stable: 'https://files.shutokorevivalproject.com/r/SRP%200.9.3.7z',
         stable_old: 'https://files.shutokorevivalproject.com/r/SRP%20MAIN_0.9.1_OFFICIAL.7z',
         ptb: 'https://files.shutokorevivalproject.com/r/SRP%200.9.4%20PTB1.7z',
-        cars: 'http://files.shutokorevivalproject.com/SRP_Car_Pack_3.6.7z',
+        cars: 'https://files.shutokorevivalproject.com/SRP_Car_Pack_3.6.7z',
     };
 
     const versions = {
